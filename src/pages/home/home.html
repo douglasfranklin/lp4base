@@ -5,13 +5,29 @@
 </ion-header>
 
 <ion-content padding>
-  <h2>Seja bem-vindo ao meu App!</h2>
-  <p>
-    This starter project comes with simple tabs-based layout for apps
-    that are going to primarily use a Tabbed UI.
-  </p>
-  <p>
-    Take a look at the <code>src/pages/</code> directory to add or change tabs,
-    update any existing page or create new pages.
-  </p>
+
+  <ion-list inset>
+    <!-- no angular isso se chama bind por interpolação -->
+    <h1>Olá, {{ nome_usuario }}</h1>
+
+    <p>Digite dois números para calcular</p>
+
+    <ion-item>
+      <ion-label>Numero 1</ion-label>
+      <ion-input type="number" [(ngModel)]="numero_1"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Numero 2</ion-label>
+      <ion-input type="number" [(ngModel)]="numero_2"></ion-input>
+    </ion-item>
+    <br>
+    <p>você irá somar os números {{numero_1}} com {{numero_2}}</p>
+    <br>
+    <button ion-button full (click)="somaDoisNumeros()">Somar</button>
+
+    <h2>Resultado: {{ resultado }}</h2>
+  </ion-list>
+
+
 </ion-content>
