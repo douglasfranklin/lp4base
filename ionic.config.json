@@ -1,0 +1,7 @@
+{
+  "name": "lp4base",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}
